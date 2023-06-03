@@ -1,0 +1,4 @@
+<button [ngStyle] = "{'pointer-events':dolarEvent}" (click) = "changeCurrency('USD')">$</button>
+<button [ngStyle] = "{'pointer-events':plnEvent}" (click) = "changeCurrency('PLN')">PLN</button>
+<button [ngStyle] = "{'pointer-events':euroEvent}" (click) = "changeCurrency('EUR')">€</button>
+<p>{{activePrice|currency:activeCurrency}}</p>

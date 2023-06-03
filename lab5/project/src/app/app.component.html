@@ -1,0 +1,28 @@
+
+<hr>
+<nav>
+    <img id = logo src="../assets/pictures/images.png" alt="kot">
+    <app-trip-price></app-trip-price>
+    <input id="menuCheck" type="checkbox" />
+    <label class='hamburgerContainer' for="menuCheck">
+        <div class='hamburger'></div>
+    </label>
+    <ul class="menu">
+        <a routerLink="/"><li>Home</li></a>
+        <a routerLink="/trips"><li class="item">Trips</li></a>
+        <a routerLink="/add"><li class="item">Add Trip</li></a>
+        <a routerLink="/cart"><li class="item">Cart</li></a>
+        <a routerLink="/myTrips"><li class="item">My Trips</li></a>
+    </ul>
+</nav>
+<hr>
+<router-outlet >
+
+</router-outlet>
+<hr style = "margin-top: 10px;">
+<footer>
+    <p>Telefon: *********</p>
+    <p>mail: haha@gmail.com</p>
+    <p>ul. Bożego Ciała 15, Kraków</p>
+</footer>
+<hr>

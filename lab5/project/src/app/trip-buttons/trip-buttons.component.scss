@@ -1,0 +1,15 @@
+:host{
+    display: flex;
+    align-items: center;
+
+    button{
+        margin: 10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 3px;
+        border-color: rgb(255, 49, 84);
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+        color: black;
+    }
+}

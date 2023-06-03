@@ -1,0 +1,22 @@
+:host{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 10px;
+
+    button{
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        color: whitesmoke;
+        
+        &:hover{
+            -webkit-box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+            -moz-box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+            box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+            outline: 1px solid rgba(66, 68, 90, 0.72);
+            color: rgb(255, 49, 84);
+        }
+    }
+}

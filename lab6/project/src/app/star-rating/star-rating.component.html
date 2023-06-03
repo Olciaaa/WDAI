@@ -1,0 +1,5 @@
+<div class="book-rating" data-jest="stars" (mouseleave) = "changeStars(-1, false)">
+    <p>
+    <span *ngFor="let fullStar of fullStars;index as i" class="fa fa-star checked" data-jest="full star" (mouseover) = "changeStars(i, false)" (click)="shareRate()"></span>
+    <span *ngFor="let emptyStar of emptyStars;index as i" class="fa fa-star-o" data-jest="empty star" (mouseover) = "changeStars(i, true)"></span></p>
+</div>

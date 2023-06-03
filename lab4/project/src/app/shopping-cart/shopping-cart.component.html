@@ -1,0 +1,6 @@
+<div>
+    <p>Ilość zarezerwowanych wycieczek: {{numberOfTrips}}</p>
+    <p *ngFor = "let trip of reservedTrips |keyvalue">{{trip.key}} - {{trip.value[0]}}</p>
+    <p>Suma zamówienia:</p>
+    <app-trip-price [ngStyle] = "{'color': 'black'}" [priceInUSD] = "value" [color] = "'black'"></app-trip-price>
+</div>

@@ -1,0 +1,3 @@
+<div *ngFor = "let trip of trips | filterPipe:filters">
+    <app-trip [trip] = "trip" [borderColor] = "color[trip.id]"></app-trip>
+</div>

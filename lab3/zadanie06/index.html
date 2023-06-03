@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Zadanie 6</title>
+</head>
+<body>
+    <div id = "content">
+
+    </div>
+    <form action="#" onsubmit="return false">
+        <section>
+            IMIĘ I NAZWISKO
+            <input type="text"
+                    required="true"
+                    id="name"
+                    name="name"
+                    required pattern="[\p{Lu}]{1}[\p{Ll}]+[ ]{1}[\p{Lu}]{1}[\p{Ll}]+([-]{1}[\p{Lu}]{1}[\p{Ll}]+)?"
+                    title="Pole musi zwierać imię rozpoczynające się wielką literą oraz nazwisko, również rozpoczynające się 
+                    wielką literą. Dozwolone są nazwiska dwuczłonowe, rozdzielone znakiem -, po którym drugi człon rozpoczyna się wielką literą. 
+                    Dozwolone są polskie znaki.">
+        </section>
+        <section>
+            TELEFON
+            <input 
+                    type="text"
+                    required ="true"
+                    id="phone"
+                    name="phone"
+                    required pattern="([ ]{0,}[0-9][ ]{0,}){9}|([ ]{0,}[\+]?([ ]{0,}[0-9][ ]{0,}){12})"
+                    title = "Numer telefonu powinien być w formacie 9-cyfrowym lub 12-cyfrowym, ewentualnie poprzedzonym znakiem +.">
+        </section>
+        <input onclick="add(event, this)" type="submit" value="Dodaj" id = "submit">
+    </form>
+</body>
+</html>

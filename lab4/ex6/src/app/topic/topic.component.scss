@@ -1,0 +1,21 @@
+:host{
+    div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        row-gap: 20px;
+        width: fit-content;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid rgb(194, 194, 194);
+    }
+
+    button{
+        padding: 20px;
+        background-color: rgb(186, 0, 121);
+        color: white;
+        border-radius: 50px;
+        border: 1px solid rgb(194, 194, 194);
+    }
+}

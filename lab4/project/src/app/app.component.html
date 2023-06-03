@@ -1,0 +1,7 @@
+<nav><app-filter></app-filter></nav>
+<main>
+    <app-shopping-cart></app-shopping-cart>
+    <div [ngStyle] = "{'background-color':color}">Twoje zarezerwowane wycieczki: {{reservedTrips}}</div>
+    <app-trips-list [trips] = "trips" [currentId] = "currentId" (idToRemove)="removeTrip($event)"></app-trips-list>
+    <app-add-trip [currentId] = "currentId" (newTrip)="addTrip($event)"></app-add-trip>
+</main>

@@ -1,0 +1,17 @@
+<h1>Users</h1>
+<div *ngFor = "let user of users;index as id">
+    <p>{{user.id}}. <i>name: </i>{{user.nickname}},<i> password: </i> {{user.password}}, <i> account type: </i>{{user.accountType}}</p>
+    <p><i>Change account type: </i><br>
+        <input type="radio" name={{id}} value="client" (click) = "changeType('client', user.id)">
+        <label for="customer"> client</label><br>
+        <input type="radio" name={{id}} value="admin" (click) = "changeType('admin', user.id)">
+        <label for="admin"> admin</label><br>
+        <input type="radio" name={{id}} value="manager" (click) = "changeType('manager', user.id)">
+        <label for="manager"> manager</label>
+    </p>
+    <p>
+        <button *ngIf = "!user.banned" (click) = "ban(user.id)">Ban</button>
+        <button *ngIf = "user.banned" (click) = "unban(user.id)">Unban</button>
+    </p>
+</div>
+

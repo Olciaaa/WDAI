@@ -1,0 +1,32 @@
+:host{
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        box-sizing: border-box;
+        background-color:aliceblue;
+
+        .item{
+            text-decoration: none;
+            color: black;
+            background-color:inherit;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+            transition:300ms ease all;
+            border-radius: 3px;
+        }
+
+        .item:hover{
+            background-color:rgb(77, 77, 77);
+            color: white;
+            cursor:pointer;
+            transition:300ms ease all;
+        }
+
+        a{
+            text-decoration: inherit;
+            color:inherit;
+        }
+    }
+}

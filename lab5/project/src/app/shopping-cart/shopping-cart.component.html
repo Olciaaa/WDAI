@@ -1,0 +1,7 @@
+<div>
+    <p>Reserved trips: {{numberOfTrips}}</p>
+    <p *ngFor = "let trip of reservedTrips |keyvalue">{{trip.key}} - {{trip.value[0]}} <button (click) = "buyTrip(trip.key)">Buy for {{trip.value[0] * trip.value[1]|currency:'USD'}}</button></p>
+    <p>Order price:</p>
+    <p>{{price|currency:currency}}</p>
+    <button [disabled]="numberOfTrips == 0" (click) = "buyAll()">Buy all</button>
+</div>

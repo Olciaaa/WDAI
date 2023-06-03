@@ -1,0 +1,15 @@
+<button (click)="deleteTrip()">Delete</button>
+<div id = "content" [ngStyle] = "{'filter': activeFilter, 'border-color':borderColor}">
+    <img src="{{trip.picture}}" alt="{{trip.name}}">
+    <h2>{{trip.name | uppercase}}</h2>
+    <strong>{{trip.place | uppercase}}</strong>
+    <p>{{startDate}} - {{endDate}}</p>
+    <app-trip-price [ngStyle] = "{'color': borderColor}" [priceInUSD] = "trip.price" [color] = "borderColor"></app-trip-price>
+    <p>{{trip.description}}</p>
+    <p *ngIf="currentAvailableMembers > 0" [ngStyle] = "{'color': color}">Number of available members: {{currentAvailableMembers}}</p>
+    <p *ngIf = "currentAvailableMembers == 0">!SOLD OUT!</p>
+    <app-trip-buttons [nameOfTrip] = "trip.name" [membersAvailable] = "trip.maxParticipants" (members)="changeMembers($event)"></app-trip-buttons>
+    <p *ngIf = "trip.grade == 0">This trip doesn't have any grades yet</p>
+    <p *ngIf = "trip.grade > 0">Trip grade: {{trip.grade}}</p>
+    <app-star-rating [rating] = "0" (ratingShare)="newTripRate($event)"></app-star-rating>
+</div>

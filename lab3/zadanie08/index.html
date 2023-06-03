@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Zadanie 8</title>
+</head>
+<body>
+    <form action="">
+        <h3>New password</h3>
+        <div class = "passwordBox">
+            <input type="password" name="password" autocomplete="current-password" required="" id="newpasswd" class = "password">
+            <i class="fa fa-eye" class="togglePassword" style="cursor: pointer;" onclick="togglePassword(this, 0)"></i>
+        </div>
+        <h3>Repeat new password</h3>
+        <div class="passwordBox">
+            <input type="password" name="rpassword" autocomplete="current-password" required="" id="repeatpasswd" class = "password" oninput="check(this)">
+            <i class="fa fa-eye" class="togglePassword" style="cursor: pointer;" onclick="togglePassword(this, 1)"></i>
+        </div>
+        <h3>Password Requirements</h3>
+        <div class = "requirements"><i class="fa fa-times-circle" style = "color: rgb(182, 182, 182);"></i>  at least 8 characters</div>
+        <div class = "requirements"><i class="fa fa-times-circle" style = "color: rgb(182, 182, 182);"></i>  at least one special character</div>
+        <div class = "requirements"><i class="fa fa-times-circle" style = "color: rgb(182, 182, 182);"></i>  at least one capital letter</div>
+        <div class = "requirements"><i class="fa fa-times-circle" style = "color: rgb(182, 182, 182);"></i>  at least one digit</div>
+    </form>
+</body>
+</html>

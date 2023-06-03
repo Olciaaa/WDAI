@@ -1,0 +1,8 @@
+<div ngModel #moreInfo id = "moreInfo"><h2 *ngIf = "showInfo" >{{info.title}}</h2><p *ngIf = "showInfo" >{{info.moreInfo}}</p></div>
+
+<div id = "content">
+    <h1>Wybierz temat</h1>
+    <div>
+        <app-topic *ngFor="let el of data; index as i" [title] = "el.title" [text] = "el.text" [id] = "i" (newItemEvent)="changeContent($event)"></app-topic>
+    </div>
+</div>

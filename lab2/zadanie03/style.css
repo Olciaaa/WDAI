@@ -1,0 +1,118 @@
+@font-face {
+    font-family: Petit;
+    src: url(../fonts/PetitFormalScript-Regular.ttf);
+}
+
+@font-face {
+    font-family: Blest;
+    src: url(../fonts/BlestBancDemoRegular.ttf);
+}
+
+@font-face {
+    font-family: Champagne;
+    src: url(../fonts/Champagne\ &\ Limousines.ttf);
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);}
+    
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-family: Champagne, Lato, Arial;
+    row-gap: 10px;
+    font-size: 17px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    -webkit-box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+    -moz-box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+    box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+}
+
+.card img{
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.text{
+    padding: 20px;
+}
+
+.text > p{
+    text-align: justify;
+}
+
+.text > h1{
+    font-size: x-large;
+}
+
+strong{
+    color: #a6004b;
+    font-size: large;
+}
+
+.foot{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 20px;
+    color: #707070;
+}
+
+button {
+	box-shadow: 6px 8px 14px -7px #707070;
+	background:linear-gradient(to bottom, #dbabc1 5%, #a6004b 100%);
+	background-color:#dbabc1;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+    width: 40%;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #adadad;
+    border: none;
+}
+button:hover {
+	background:linear-gradient(to bottom, #a6004b 5%, #dbabc1 100%);
+	background-color:#a6004b;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+/*1050px (komputer)
+950px (tablet poziomo)
+750px (tablet pionowo)
+450px (telefon poziomo)
+300px (telefon pionowo)*/
+
+
+@media (min-width: 750px) and (max-width:1200px) {
+    .card{
+        width: 30vw;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 750px) {
+    .card{
+        width: 40vw
+    }
+}
+
+@media (max-width: 601px) {
+    .card{
+        width: 90vw
+    }
+}

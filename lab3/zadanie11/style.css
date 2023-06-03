@@ -1,0 +1,60 @@
+b{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+#pagination > div{
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#nav{
+    display: flex;
+    flex-direction: row;
+}
+
+#nav>div{
+    width: 33%;
+}
+
+#regions, .subTab{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#regions > div, .subTab > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#regions > div > p{
+    width: 33%;
+    margin: 0;
+}
+
+.subTab > div > *{
+    width: 25%;
+    margin: 0;
+}
+
+.subTab{
+    display: none;
+}

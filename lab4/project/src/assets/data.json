@@ -1,0 +1,102 @@
+[
+    {
+        "name":"California Trip",
+        "place":"California",
+        "startDate":"2022-11-26",
+        "endDate":"2022-12-30",
+        "price":"2000.50",
+        "maxParticipants": 0,
+        "picture": "assets/pictures/California.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+        "name":"Bali Trip",
+        "place":"Bali",
+        "startDate":"2022-11-26",
+        "endDate":"2022-12-30",
+        "price":"200.50",
+        "maxParticipants": 5,
+        "picture": "assets/pictures/Bali.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+        "name":"Ecuador Trip",
+        "place":"Ecuador",
+        "startDate":"2022-11-26",
+        "endDate":"2022-12-30",
+        "price":"4000.50",
+        "maxParticipants": 20,
+        "picture": "assets/pictures/Ecuador.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+        "name":"Greece Trip",
+        "place":"Greece",
+        "startDate":"2022-11-26",
+        "endDate":"2022-12-30",
+        "price":"2000.50",
+        "maxParticipants": 20,
+        "picture": "assets/pictures/Greece.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+        "name":"India Trip",
+        "place":"India",
+        "startDate":"2022-11-26",
+        "endDate":"2022-12-30",
+        "price":"2000",
+        "maxParticipants": 16,
+        "picture": "assets/pictures/India.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+        "name":"Ireland Trip",
+        "place":"Ireland",
+        "startDate":"2022-11-26",
+        "endDate":"2022-12-30",
+        "price":"2000.50",
+        "maxParticipants": 20,
+        "picture": "assets/pictures/Ireland.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+        "name":"Italy Trip",
+        "place":"Italy",
+        "startDate":"2022-11-26",
+        "endDate":"2022-12-30",
+        "price":"2000.50",
+        "maxParticipants": 20,
+        "picture": "assets/pictures/Italy.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+        "name":"NewZeland Trip",
+        "place":"NewZeland",
+        "startDate":"2022-11-26",
+        "endDate":"2022-12-30",
+        "price":"2000.50",
+        "maxParticipants": 10,
+        "picture": "assets/pictures/NewZeland.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+        "name":"Scotland Trip",
+        "place":"Scotland",
+        "startDate":"2022-11-26",
+        "endDate":"2022-12-30",
+        "price":"2000.50",
+        "maxParticipants": 30,
+        "picture": "assets/pictures/Scotland.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+        "name":"Vietnam Trip",
+        "place":"Vietnam",
+        "startDate":"2022-11-26",
+        "endDate":"2022-12-30",
+        "price":"2000.50",
+        "maxParticipants": 6,
+        "picture": "assets/pictures/Vietnam.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    }
+]

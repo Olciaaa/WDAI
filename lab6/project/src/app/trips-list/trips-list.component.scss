@@ -1,0 +1,51 @@
+:host{
+    display: flex;
+    flex-direction: row;
+
+    main{
+        flex: 1;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #reserved{
+        font-size: 20px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        border: 1px solid rgb(177, 177, 177);
+        border-radius: 3px;
+        -webkit-box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+        -moz-box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+        box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+        margin: 20px 0px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .trips{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        row-gap: 20px;
+        column-gap: 10px;
+    }
+
+    #nav{
+        width: 300px;
+        text-align: center;
+        border-radius: 3px;
+        color: whitesmoke;
+    }
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+
+        #nav{
+            width: 100%;
+            border-right: none;
+        }
+    }
+}

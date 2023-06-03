@@ -1,0 +1,22 @@
+<div class = "img">
+    <h1>Blue Blue Sky</h1>
+</div>
+<main>
+  <google-map id = "map" height="400px"
+  width="600px"
+  [center]="center"
+  [zoom]="zoom"
+  (mapClick)="moveMap($event)"
+  (mapMousemove)="move($event)">
+  <map-marker #marker="mapMarker"
+    *ngFor="let markerPosition of markerPositions"
+    [position]="markerPosition"
+    (mapClick)="openInfoWindow(marker)"></map-marker>
+<map-info-window>Bożego Ciała 15</map-info-window>
+</google-map>
+<div>
+<h2>O nas</h2>
+<p style="text-align: center;"><strong>Witaj w naszej firmie!</strong> Zapoznaj się z naszą ofertą, bla bla bla bla bla</p>
+</div>
+
+</main>

@@ -1,0 +1,93 @@
+@font-face {
+    font-family: Champagne;
+    src: url(../fonts/Champagne\ &\ Limousines.ttf);
+}
+
+body{
+    margin: 0;
+    background-color: rgb(237, 241, 245);
+}
+
+nav{
+    height: fit-content;
+    padding: 20px;
+    background-color: aliceblue;
+    box-sizing: border-box;
+    border-right: 1px solid rgb(203, 206, 209);
+    width: 400px;
+    transition: width 500ms ease-in-out;
+}
+
+.navSections{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    column-gap: 10px;
+    text-transform: uppercase;
+    font-family: Champagne;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 0 10px 10px 0;
+    align-items: center;
+    transition: font-size 500ms ease-in-out;
+}
+
+.navSections:hover{
+    background-color: rgb(170, 213, 255);
+}
+
+.navSections span{
+    padding: 5px;
+    border: 1px solid rgb(0, 15, 66);
+    border-radius: 5px;
+    height: fit-content;
+    width: fit-content;
+    font-size: 30px;
+}
+
+.navSections:hover span{
+    color: aliceblue;
+    border-color: aliceblue;
+}
+
+.navSections a{
+    text-decoration: none;
+    color: rgb(0, 15, 66);
+}
+
+.navSections p{
+    color: rgb(78, 202, 252);
+    width: fit-content;
+    padding: 5px 8px;
+    border: 1px solid rgb(78, 202, 252);
+    border-radius: 20px;
+    margin: 0;
+    font-size: 20px;
+}
+
+@media(min-width: 90px) and (max-width:400px){
+    a{
+        display: none;
+    }
+    nav{
+        width: 120px;
+        box-sizing: border-box;
+        transition: width 500ms ease-in-out;
+    }
+    .navSections{
+        justify-content: center;
+        border-radius: 10px;
+        font-size: 0;
+        transition: font-size 500ms ease-in-out;
+    }
+}
+
+@media(max-width:90px){
+    nav{
+        display: none;
+    }
+    #content::before{
+        content: "Sorry, za mały ekran, nie da się :(";
+    }
+}

@@ -1,0 +1,5 @@
+:host div{
+    border: 1px solid black;
+    width: fit-content;
+    padding: 20px;
+}

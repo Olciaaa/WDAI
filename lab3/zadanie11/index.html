@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Zadanie 11</title>
+</head>
+<body>
+    <section id = "content">
+        <div id = "pagination"></div>
+        <div id = "nav">
+            <div>
+                <strong>Nazwa regionu</strong>
+                <b onclick = "sortRegions(1, 'subregion', 0)">&#9653;</b>
+                <b onclick = "sortRegions(-1, 'subregion', 0)">&#9663;</b>
+                <input onkeyup = "filterRegions(this, 'subregion')" type="text">
+            </div>
+            <div>
+                <strong>Populacja</strong>
+                <b onclick = "sortRegions(1, 'population', 1)">&#9653;</b>
+                <b onclick = "sortRegions(-1, 'population', 1)">&#9663;</b>
+                <input onkeyup = "filterRegions(this, 'population')" type="text">
+            </div>
+            <div>
+                <strong>Powierzchnia</strong>
+                <b onclick = "sortRegions(1, 'area', 1)">&#9653;</b>
+                <b onclick = "sortRegions(-1, 'area', 1)">&#9663;</b>
+                <input onkeyup = "filterRegions(this, 'area')" type="text">
+            </div>
+        </div>
+        <section id = "regions">
+        </section>
+    </section>
+</body>
+</html>

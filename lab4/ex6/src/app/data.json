@@ -1,0 +1,9 @@
+[{"title":"The Basics", 
+    "text":"Core Angular basics you have to know", 
+    "moreInfo":"Angular is a platform and framework for building single-page client applications using HTML and TypeScript. Angular is written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import into your applications."}, 
+{"title":"Components", 
+    "text":"Components are a core concept for building Angular UIs and apps", 
+    "moreInfo":"Within components you can split logic (and markup) into separate building blocks and then combine those building blocks (and re-use them) to build powerful user interfaces"}, 
+{"title":"Events", 
+    "text":"Events are important in Angular", 
+    "moreInfo":"Events allow you to trigger code on demand!"}]

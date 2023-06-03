@@ -1,0 +1,20 @@
+<ng-container *ngIf = loginToken[0]>
+  <button (click)="logOut()">Log Out</button>
+</ng-container>
+<ng-container *ngIf = !loginToken[0]>
+  <div class="form-style-8">
+    <h2>Log in</h2>
+    <form [formGroup]="addAuth">
+      <input id="name" type="text" formControlName="login" placeholder="login"/>
+      <input id="password" type="password" formControlName="password" placeholder="password"/>
+      <button type="submit" [disabled]="!addAuth.valid" (click)="submitForm()">Log in</button>
+      </form>
+      <!-- <div class="errors">
+        <div *ngIf="!addAuth.get('tripName')!.valid">Trip name is required</div>
+          <div *ngIf="!addAuth.get('nickname')!.valid">Nick should have 3+ length</div>
+          <div *ngIf="!addAuth.get('review')!.valid">Reviev should have 50 - 300 length</div>
+      </div> -->
+      <br>
+      Don't have an account yet? <a href="signin">Sign in</a>
+</div>
+</ng-container>

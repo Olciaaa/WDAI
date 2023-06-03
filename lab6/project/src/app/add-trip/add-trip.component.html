@@ -1,0 +1,18 @@
+<app-trips-list></app-trips-list>
+<div class="form-style-8">
+   <h2>Add Trip</h2>
+   <form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+       <input type = "text" name="name" formControlName="name" placeholder="Trip name">
+       <input type = "text" name="place" formControlName="place" placeholder="Destination">
+       <input type = "date" name="startDate" formControlName="startDate">
+       <input type = "date" name="endDate" formControlName="endDate">
+       <input type="number" min="0.00" step="0.01" name = "price" formControlName = "price" placeholder="price">
+       <input type="number" min = "0" step = "1" name = "maxParticipants" formControlName = "maxParticipants" pattern="[0-9]+" placeholder="Max participants">
+       <input type="text" name = "picture" formControlName = "picture" placeholder="https://example.com" pattern="(https|http)://.*.(jpg|png)" placeholder="Link do zdjęcia">
+       <input type="text" name = "description" formControlName = "description" placeholder="Opis">
+   
+    <p *ngIf="!dateFine">!Data początku większa niż data końca!</p>
+   
+    <button [disabled]="!modelForm.valid" type="submit">Send</button>
+   </form>
+</div>

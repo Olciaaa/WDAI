@@ -1,0 +1,119 @@
+@font-face {
+    font-family: Blest;
+    src: url(../fonts/BlestBancDemoRegular.ttf);
+}
+
+@font-face {
+    font-family: Champagne;
+    src: url(../fonts/Champagne\ &\ Limousines.ttf);
+}
+
+body {
+    background-image: url("assets/bg.jpg");
+    background-color: rgba(69, 131, 167, 0.7);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    background-blend-mode: soft-light;
+  }
+
+nav{
+    font-family: Champagne;
+    font-size: 25px;
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(98, 180, 227);
+}
+
+nav::before {
+    content: "";
+  }
+  
+ nav::after {
+    content: "";
+  }
+
+#nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.navSections, #logo, button{
+    text-align: center;
+    line-height: 2;
+    display: inline-block;
+    vertical-align: middle;
+    height: 50px;
+}
+
+.navSections, button{
+    width: 130px;
+}
+
+.navSections:hover{
+    background-color: rgb(154, 203, 231);
+}
+
+.dropDown{
+    position: relative;
+}
+
+.dropDown:hover::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -10px;
+    z-index: 1;
+    border-left: 6px solid transparent;
+    border-right:6px solid transparent;
+    border-top:12px solid rgb(154, 203, 231);
+}
+
+.dropDown:hover .dropdownCont{
+    display: block;
+}
+
+.dropdownCont{
+    display: none;
+    background-color: aliceblue;
+}
+
+.dropdownCont :hover{
+    background-color: rgb(154, 203, 231);
+    color: aliceblue;
+}
+
+.dropdownCont a {
+    color: rgb(98, 180, 227);;
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+button{
+    color: aliceblue;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid aliceblue;
+    border-radius: 20px;
+    background-color: rgb(98, 180, 227);
+}
+
+#signup{
+    color: rgb(98, 180, 227);
+    border-color: rgb(98, 180, 227);
+    background-color: aliceblue;
+}
+
+button:hover{
+    -webkit-box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+    -moz-box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+    box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+}

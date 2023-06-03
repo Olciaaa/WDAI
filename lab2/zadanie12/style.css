@@ -1,0 +1,383 @@
+@font-face {
+    font-family: Champagne;
+    src: url(../fonts/Champagne\ &\ Limousines.ttf);
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: Champagne;
+}
+
+hr{
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    background-image: linear-gradient(to right, #fff, #bbb, #fff);
+    margin: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+#img{
+    z-index: -2;
+    position: relative;
+    width: 300px;
+    height: 70%;
+    background-color: rgb(16, 41, 165);
+    background: linear-gradient(75deg, rgb(16, 41, 165), rgb(65, 90, 216));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 3px;
+    -webkit-box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+    -moz-box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+    box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+}
+
+#img > img:nth-child(1){
+    width: 400px;
+    transform: rotate(-17deg);
+    position: absolute;
+    left: -110px;
+}
+
+#img > p:nth-child(2){
+    top: -80px;
+    font-size: 125px;
+    font-family: Arial;
+    font-weight: bold;
+    position: absolute;
+    z-index: -1;
+    color: rgba(245, 245, 245, 0.1);
+}
+
+#img > img:nth-child(3){
+    width: 20%;
+    position: absolute;
+    top:  15px;
+    left: 10px;
+}
+
+#img > img:nth-child(4){
+    width: 12%;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    filter: invert(100%);
+}
+
+#content{
+    border-radius: 3px;
+    padding: 20px;
+    width: 400px;
+    -webkit-box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+    -moz-box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+    box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+}
+
+#content >p {
+    text-align: justify;
+}
+
+#content > #head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#head > div, button{
+    padding: 10px;
+}
+
+#head > div, button{
+    border-radius: 5px;
+    background-color: rgb(16, 41, 165);
+    color: white;
+}
+
+button{
+    border: 1px solid #ccc;
+}
+
+#colors{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#colors input{
+    display: none;
+}
+
+#colors label > div{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+#colors .statusCheck:has(input:checked) label > div{
+    border: 5px solid #ddd;
+}
+
+#blueLabel > div{
+    background-color: rgb(16, 41, 165);
+}
+
+#redLabel > div{
+    background-color: rgb(155, 0, 0);
+}
+
+#greenLabel > div{
+    background-color: rgb(40, 120, 0);
+}
+
+#orangeLabel > div{
+    background-color: rgb(169, 82, 0);
+}
+
+#blackLabel > div{
+    background-color: rgb(0, 0, 0);
+}
+
+#card:has(#red:checked) #head > div, #card:has(#red:checked) button{
+    background-color: rgb(155, 0, 0);
+}
+#card:has(#red:checked) #img{
+    background-color: rgb(155, 0, 0);
+    background: linear-gradient(75deg, rgb(155, 0, 0), rgb(231, 99, 99));
+}
+
+#card:has(#green:checked) #head > div, #card:has(#green:checked) button{
+    background-color: rgb(40, 120, 0);
+}
+#card:has(#green:checked) #img{
+    background-color: rgb(40, 120, 0);
+    background: linear-gradient(75deg, rgb(40, 120, 0), rgb(132, 225, 86));
+}
+
+#card:has(#orange:checked) #head > div, #card:has(#orange:checked) button{
+    background-color: rgb(169, 82, 0);
+}
+#card:has(#orange:checked) #img{
+    background-color: rgb(169, 82, 0);
+    background: linear-gradient(75deg, rgb(169, 82, 0), rgb(236, 173, 114));
+}
+
+#card:has(#black:checked) #head > div, #card:has(#black:checked) button{
+    background-color: rgb(0, 0, 0);
+}
+#card:has(#black:checked) #img{
+    background-color: rgb(0, 0, 0);
+    background: linear-gradient(75deg, rgb(0,0,0), rgb(97, 96, 96));
+}
+
+#card:has(#red:checked) img:not(img:nth-child(4)){
+    filter: hue-rotate(475deg);
+}
+
+#card:has(#green:checked) img:not(img:nth-child(4)){
+    filter: hue-rotate(565deg);
+}
+
+#card:has(#orange:checked) img:not(img:nth-child(4)){
+    filter: hue-rotate(155deg);
+}
+
+#card:has(#black:checked) img:not(img:nth-child(4)){
+    filter: grayscale(100%);
+}
+
+#card:has(#red:checked) > #content > #sizes > .statusCheck:has(input:checked) div{
+    background-color: rgb(155, 0, 0);
+}
+
+#card:has(#green:checked) > #content > #sizes > .statusCheck:has(input:checked) div{
+    background-color: rgb(40, 120, 0)
+}
+
+#card:has(#orange:checked) > #content > #sizes > .statusCheck:has(input:checked) div{
+    background-color: rgb(169, 82, 0)
+}
+
+#card:has(#black:checked) > #content > #sizes > .statusCheck:has(input:checked) div{
+    background-color: rgb(0, 0, 0);
+}
+
+#card:has(#blue:hover) #head > div, #card:has(#blue:hover) button{
+    background-color: rgb(16, 41, 165)!important;
+}
+#card:has(#blue:hover) #img{
+    background-color: rgb(16, 41, 165)!important;
+    background: linear-gradient(75deg, rgb(16, 41, 165), rgb(65, 90, 216))!important;
+}
+#card:has(#blue:hover) > #content > #sizes > .statusCheck:has(input:checked) div{
+    background-color: rgb(16, 41, 165)!important;
+}
+#card:has(#blue:hover) img:not(img:nth-child(4)){
+    filter: hue-rotate(0deg)!important;
+}
+
+#card:has(#red:hover) #head > div, #card:has(#red:hover) button{
+    background-color: rgb(155, 0, 0)!important;
+}
+#card:has(#red:hover) #img{
+    background-color: rgb(155, 0, 0)!important;
+    background: linear-gradient(75deg, rgb(155, 0, 0), rgb(231, 99, 99))!important;
+}
+#card:has(#red:hover) > #content > #sizes > .statusCheck:has(input:checked) div{
+    background-color: rgb(155, 0, 0)!important;
+}
+#card:has(#red:hover) img:not(img:nth-child(4)){
+    filter: hue-rotate(475deg)!important;
+}
+
+#card:has(#green:hover) #head > div, #card:has(#green:hover) button{
+    background-color: rgb(40, 120, 0)!important;
+}
+#card:has(#green:hover) #img{
+    background-color: rgb(40, 120, 0)!important;
+    background: linear-gradient(75deg, rgb(40, 120, 0), rgb(132, 225, 86))!important;
+}
+#card:has(#green:hover) > #content > #sizes > .statusCheck:has(input:checked) div{
+    background-color: rgb(40, 120, 0)!important;
+}
+#card:has(#green:hover) img:not(img:nth-child(4)){
+    filter: hue-rotate(565deg)!important;
+}
+
+#card:has(#orange:hover) #head > div, #card:has(#orange:hover) button{
+    background-color: rgb(169, 82, 0)!important;
+}
+#card:has(#orange:hover) #img{
+    background-color: rgb(169, 82, 0)!important;
+    background: linear-gradient(75deg, rgb(169, 82, 0), rgb(236, 173, 114))!important;
+}
+#card:has(#orange:hover) > #content > #sizes > .statusCheck:has(input:checked) div{
+    background-color: rgb(169, 82, 0)!important;
+}
+#card:has(#orange:hover) img:not(img:nth-child(4)){
+    filter: hue-rotate(155deg)!important;
+}
+
+#card:has(#black:hover) #head > div, #card:has(#black:hover) button{
+    background-color: rgb(0, 0, 0)!important;
+}
+#card:has(#black:hover) #img{
+    background-color: rgb(0, 0, 0)!important;
+    background: linear-gradient(75deg, rgb(0,0,0), rgb(97, 96, 96))!important;
+}
+#card:has(#black:hover) > #content > #sizes > .statusCheck:has(input:checked) div{
+    background-color: rgb(0, 0, 0)!important;
+}
+#card:has(#black:hover) img:not(img:nth-child(4)){
+    filter: grayscale(100%)!important;
+}
+
+#sizes{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#sizes div{
+    text-align: center;
+    line-height: 23px;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    outline: 1px solid #ccc;
+}
+
+#sizes input{
+    display: none;
+}
+
+#sizes > .statusCheck:has(input:checked) div{
+    background-color: rgb(16, 41, 165);
+    outline: 1px solid white;
+    color: white;
+}
+
+#foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#foot strong{
+    font-size: 25px;
+}
+
+button{
+    font-size: 15px;
+}
+
+button:hover{
+    background-color: #eee !important;
+    color: black;
+}
+
+@media(min-width: 400px) and (max-width: 800px){
+    #card{
+        flex-direction: column;
+    }
+
+    #img{
+        width: 400px;
+        height: 300px;
+    }
+
+    #img > img:nth-child(1){
+        transform: rotate(0);
+        left: 0;
+    }
+
+    #img > p:nth-child(2){
+        top: -110px;
+        font-size: 168px;
+    }
+}
+
+@media(max-width: 400px){
+    #card{
+        flex-direction: column;
+    }
+
+    #img{
+        width: 100%;
+        height: 300px;
+    }
+
+    #img > img:nth-child(1){
+        transform: rotate(0);
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    #content{
+        width: 100%;
+    }
+
+    #img > p:nth-child(2){
+        top: -110px;
+        font-size: 100%;
+    }
+}

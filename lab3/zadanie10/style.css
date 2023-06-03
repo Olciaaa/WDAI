@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+
+#area{
+    width: 500px;
+    height: 300px;
+    -webkit-box-shadow: 8px 8px 24px -8px rgba(160, 160, 160, 0.72);
+    -moz-box-shadow: 8px 8px 24px -8px rgba(160, 160, 160, 0.72);
+    box-shadow: 8px 8px 24px -8px rgba(160, 160, 160, 0.72);
+    position: relative;
+    border: 1px solid rgba(160, 160, 160, 0.4);
+}
+
+#ball{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(131, 0, 0);
+    border-radius: 30px;
+    background-image: url(assets/eyes.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 520px){
+    #area{
+        width: 100%;
+    }
+}
+

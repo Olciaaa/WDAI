@@ -1,0 +1,177 @@
+@font-face {
+    font-family: Champagne;
+    src: url(../fonts/Champagne\ &\ Limousines.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    font-family: Champagne;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+body{
+    background-image: url("assets/bcg.jpg");
+    background-color: rgb(116, 50, 116);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-blend-mode: multiply;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+hr{
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    background-image: linear-gradient(to right, #333, #ccc, #333);
+    margin: 1px;
+}
+
+nav{    
+    width: 300px;
+    padding: 20px;
+    background-color: rgb(51, 51, 85);
+    height: fit-content;
+    border-radius: 5px;
+}
+
+nav div{
+    width: 100%;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+nav li{
+    padding: 10px 0;
+    width: 100%;
+}
+
+nav li:hover{
+    background-color: rgba(51, 51, 51, 0.7);
+    outline: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+nav label{
+    width: 100%;
+}
+
+.dropdownCont{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.menuCheck {
+    display: none;
+}
+
+.dropdownCont p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 0;
+    background-color: rgba(51, 51, 51, 0.7);
+    transition: height 500ms ease-in-out;
+}
+
+.dropdownCont p:hover{
+    position: relative;
+    background-color: rgba(204, 204, 204, 0.5);
+    background: linear-gradient(180deg, rgba(51, 51, 51, 0.7) 50%, rgba(204, 204, 204, 0.5) 50%);
+    outline: none;
+    border-top: 1px solid rgb(112, 112, 112);
+    border-bottom: 1px solid rgb(112, 112, 112);
+}
+
+.dropdownCont p:hover::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+    border-bottom: 25px solid transparent;
+    border-top: 25px solid transparent;
+    border-right: 15px solid rgb(51, 51, 85);
+}
+
+.dropdownCont p:hover::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1;
+    border-bottom: 25px solid transparent;
+    border-top: 25px solid transparent;
+    border-left: 15px solid rgb(51, 51, 85);
+}
+
+#menuCheckCov1, .labelCheck > li{
+    display: none;
+}
+
+nav:has(.menuCheck:checked) label>li:hover{
+    background-color: transparent;
+    outline: none;
+    border-radius: 2px;
+}
+
+.statusCheck:has(> .menuCheck:checked) > .dropdownCont p {
+    border-radius: 3px;
+    height: 50px;
+    transition: height 500ms ease-in-out;
+    font-size: 20px;
+}
+
+.statusCheck:has(> .menuCheck:checked) .dropDown{
+    display: none;
+}
+
+.statusCheck:has(> .menuCheck:checked) #dropDown5{
+    display: block;
+}
+
+.statusCheck:has(> .menuCheck:checked) > .labelCheck > li{
+    position: relative;
+    display: block;
+    border-radius: 3px;
+    background-color: rgba(204, 204, 204, 0.3);
+}
+
+.statusCheck:has(> .menuCheck:checked) > .labelCheck > li::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 20px;
+    bottom: -10px;
+    z-index: 1;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid rgba(204, 204, 204, 0.3);
+}

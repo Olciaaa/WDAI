@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    background-image: url(assets/bcg3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-color: rgba(8, 0, 44, 0.6);
+    background-blend-mode: multiply;
+}
+
+*{
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+#content{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    height: fit-content;
+}
+
+#boxes{
+    position: relative;
+    width: fit-content;
+}
+
+#content > p, #content > section{
+    color: aliceblue;
+    padding: 20px;
+}
+
+#boxes div{
+    border-radius: 5px;
+    padding: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    text-align: center;
+    color: aliceblue;
+}
+
+#box1{
+    background-color: rgb(112, 52, 190);
+}
+
+#box2{
+    background-color: rgb(212, 5, 143);
+}
+
+#box3{
+    background-color: rgb(175, 245, 37);
+    color: black;
+}
+
+#boxes div:hover, button:hover{
+    -webkit-box-shadow: 8px 8px 24px -8px rgba(255, 255, 255, 0.72);
+    -moz-box-shadow: 8px 8px 24px -8px rgba(255, 255, 255, 0.72);
+    box-shadow: 8px 8px 24px -8px rgba(255, 255, 255, 0.72);
+}
+
+#content > section{
+    display: flex;
+    flex-direction: row;
+    column-gap: 3px;
+}
+
+#buttons{
+    text-align: center;
+    padding: 50px 0;
+}
+
+#buttons > button{
+    color: rgb(255, 123, 0);
+    border-radius: 30px;
+    background-color: rgba(240, 248, 255, 0.3);
+    padding: 10px;
+    border: 1px dotted rgb(255, 123, 0);
+}

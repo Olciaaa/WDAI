@@ -1,0 +1,11 @@
+<app-filter id = "nav"></app-filter>
+<main>
+    <div id = "reserved" [ngStyle] = "{'background-color':color, 'color':'whitesmoke'}">Twoje zarezerwowane wycieczki: {{reservedTrips}}</div>
+    <div class = "trips">    
+        <div *ngFor = "let trip of trips | filterPipe:filters">
+            <app-trip [trip] = "trip" [borderColor] = "colors[trip.id]"></app-trip>
+        </div>
+    </div>
+</main>
+
+

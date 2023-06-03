@@ -1,0 +1,36 @@
+<hr>
+<nav>
+    <img id = logo src="../assets/pictures/images.png" alt="kot">
+    <div id = "priceButtons">
+        <button [ngStyle] = "{'pointer-events':dolarEvent}" (click) = "changeCurrency('USD')">$</button>
+        <button [ngStyle] = "{'pointer-events':plnEvent}" (click) = "changeCurrency('PLN')">PLN</button>
+        <button [ngStyle] = "{'pointer-events':euroEvent}" (click) = "changeCurrency('EUR')">€</button>
+    </div>
+    <input id="menuCheck" type="checkbox" />
+    <label class='hamburgerContainer' for="menuCheck">
+        <div class='hamburger'></div>
+    </label>
+    <ul class="menu">
+        <a routerLink="/"><li>Home</li></a>
+        <ng-container *ngIf = "!(type == 'admin' || type == 'manager')"><a routerLink="/trips"><li class="item">Trips</li></a></ng-container>
+        <ng-container *ngIf = "type == 'admin' || type == 'manager'"><a routerLink="/add"><li class="item">Trip manager</li></a></ng-container>
+        <ng-container *ngIf = "type == 'client'"><a routerLink="/cart"><li class="item">Cart</li></a>
+        <a routerLink="/myTrips"><li class="item">My Trips</li></a></ng-container>
+        <ng-container *ngIf = "type == 'admin'"><a routerLink="/users"><li class="item">Users manager</li></a></ng-container>
+        <a routerLink="/login"><li class="item">
+            <ng-container *ngIf = "loginToken[0]"><i style = "color: rgba(255, 99, 71, 0.9);">{{type}}</i> {{login}}</ng-container>
+            <ng-container *ngIf = "!loginToken[0]">Log in</ng-container>
+        </li></a> 
+    </ul>
+</nav>
+<hr>
+<router-outlet >
+
+</router-outlet>
+<hr style = "margin-top: 10px;">
+<footer>
+    <p>Telefon: *********</p>
+    <p>mail: haha@gmail.com</p>
+    <p>ul. Bożego Ciała 15, Kraków</p>
+</footer>
+<hr>

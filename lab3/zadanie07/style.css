@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body > div{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    width: 100%;
+    white-space: pre-line;
+}

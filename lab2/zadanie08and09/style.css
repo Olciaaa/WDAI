@@ -1,0 +1,185 @@
+@keyframes transitionIn1 {
+
+    from {
+        transform: translateX(-150px);
+        opacity: 0.2;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes transitionIn2 {
+
+    from {
+        transform: translateX(150px);
+        opacity: 0.2;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes transitionIn3 {
+
+    from {
+        transform: translateY(-150px);
+        opacity: 0.2;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes transitionIn4 {
+
+    from {
+        transform: translateY(150px);
+        opacity: 0.2;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@font-face{
+	font-family: Champagne;
+	src: url(../fonts/Champagne\ &\ Limousines.ttf);
+}
+
+html{
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-color: rgb(40, 0, 0);
+    background: linear-gradient(170deg, rgb(40, 0, 0) 40%, rgb(20, 0, 0) 40%);
+}
+  
+* {
+    font-family: Champagne, Arial;
+    box-sizing: border-box;
+    font-size: 18px;
+    color: whitesmoke;
+}
+
+header{
+    width: 100vw;
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+h1{
+    margin: 0;
+    font-size: 25px;
+}
+
+#blueBcg{
+    position: absolute;
+    width: 100vw;
+    height: 55%;
+    background-color: rgb(20, 0, 0);
+    z-index: -10;
+    top: 45%;
+}
+
+#content{
+    width: 50%;
+    animation: transitionIn1 2s;
+}
+
+#content > p{
+    text-align: justify;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid whitesmoke;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: whitesmoke;
+    color: rgb(20, 0, 0);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 8px 8px 24px -8px rgba(224, 224, 224, 0.72);
+    -moz-box-shadow: 8px 8px 24px -8px rgba(224, 224, 224, 0.72);
+    box-shadow: 8px 8px 24px -8px rgba(224, 224, 224, 0.72);
+    animation: transitionIn2 2s;
+}
+
+form > *{
+    color: rgb(20, 0, 0);
+}
+
+form > h1{
+    margin-bottom: 10px;
+}
+
+form > input{
+    padding: 10px;
+    border: 0;
+    background-color: whitesmoke;
+    border-bottom: 0.1px solid rgba(20, 0, 0, 0.3);
+}
+
+form >button{
+    width: fit-content;
+    border-color: rgb(20, 0, 0);
+}
+
+form > button:hover{
+    border-color: whitesmoke;
+    background-color: rgb(20, 0, 0);
+    color: whitesmoke;
+}
+
+@media (min-width: 200px) and (max-width: 800px) {
+    header{
+        flex-direction: column;
+        row-gap: 20px;
+        padding: 20px;
+    }
+    #content{
+        width: 100%;
+        animation: transitionIn3 2s;
+    }
+    form{
+        width: 100%;
+        animation: transitionIn4 2s;
+    }
+}
+
+@media(max-width: 200px){
+    header{
+        display: none;
+    }
+
+    body:before{
+        content: "Za mały ekran, nie dasz rady wyświelić formularza :(";
+        position: absolute;
+    }
+}

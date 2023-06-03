@@ -1,0 +1,12 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    p{
+        margin: 0;
+        margin-top: 5px;
+    }
+    h1{
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,21 @@
+<p style = "color: whitesmoke;">{{today}}</p>
+<div *ngFor = "let state of states; index as id">
+    <input class = "state" type="checkbox" name="state" value = "state" [checked]="stateFilter[id]"
+    (change)="stateFilter[id] = !stateFilter[id]" checked>
+    <label style="color: whitesmoke;">{{state}}</label>
+</div> 
+<div id = "content">
+    <h1>Bought Trips</h1>
+    <div *ngFor = "let trip of data|keyvalue | statusFilter:stateFilter">
+        <ng-container *ngIf="trip.value[5] != 0">
+            <strong>{{trip.value[0]}}</strong>
+            <p>{{trip.value[1]|currency:currency}}</p>
+            <p>{{trip.value[2]}}</p>
+            <p>{{trip.value[3]}}</p>
+            <p>{{trip.value[4]}}</p>
+            <p>{{trip.value[5]}}</p>
+            <p>{{trip.value[6]}}/{{trip.value[7]}}/{{trip.value[8]}}</p>
+            <p><i>{{trip.value[9]}}</i></p>
+        </ng-container>
+    </div>
+</div>

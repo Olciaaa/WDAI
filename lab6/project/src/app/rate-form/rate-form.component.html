@@ -1,0 +1,16 @@
+<div class="form-style-8">
+    <h2>Dodaj recenzję</h2>
+    <form [formGroup]="addReview">
+      <input id="name" type="text" formControlName="tripName" placeholder="Trip name"/>
+      <input id="name" type="text" formControlName="nickname" placeholder="Nickname"/>
+      <input id="date" type="date" formControlName="date"/>
+      <textarea id="review" type="text" formControlName="review" cols="60" rows="5" placeholder="Tell us your opinion..."></textarea>
+      <button type="submit" [disabled]="!addReview.valid" (click)="submitForm()">Rate a trip</button>
+      </form>
+      <div class="errors">
+        <div *ngIf="!addReview.get('tripName')!.valid">Trip name is required</div>
+          <div *ngIf="!addReview.get('nickname')!.valid">Nick should have 3+ length</div>
+          <div *ngIf="!addReview.get('review')!.valid">Reviev should have 50 - 300 length</div>
+      </div>
+</div>
+

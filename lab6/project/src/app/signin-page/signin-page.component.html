@@ -1,0 +1,16 @@
+<div class="form-style-8">
+    <h2>Sign in</h2>
+    <form [formGroup]="addAuth">
+      <input id="name" type="text" formControlName="login" placeholder="login"/>
+      <input id="name" type="password" formControlName="password" placeholder="password"/>
+      <input id="name" type="password" formControlName="password2" placeholder="repeat password"/>
+      <button type="submit" [disabled]="!addAuth.valid" (click)="submitForm()">Sign in</button>
+      </form>
+      <div class="errors">
+        <div *ngIf="!addAuth.get('login')!.valid">Login too short or already exists</div>
+        <div *ngIf="!addAuth.get('password')!.valid">Password should have 8+ length</div>
+        <div *ngIf="!addAuth.valid">Passwords should match</div>
+      </div>
+      <br>
+      <a href="login">Back to Log in page</a>
+</div>

@@ -1,0 +1,256 @@
+@font-face {
+    font-family: Champagne;
+    src: url(../fonts/Champagne\ &\ Limousines.ttf);
+}
+
+body{
+    margin: 0;
+    background: url(assets/bcg1.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(124, 124, 124, 0.4);
+    background-blend-mode: multiply;
+}
+
+*{
+    font-size: 18px;
+    box-sizing: border-box;
+    font-family: Champagne;
+    color: aliceblue;
+}
+
+#grid-container > *{
+    border-radius: 5px;
+}
+
+h1{
+    font-size: 35px;
+    text-shadow: 2px 2px 3px rgb(159, 160, 160);
+}
+
+header{
+    color: aliceblue;
+    grid-area: header;
+    background-color: rgba(119, 117, 117, 0.9);
+    text-align: center;
+    background-image: url(assets/bcg_footer.png);
+    background-blend-mode: multiply;
+}
+
+#left{
+    top: 0;
+    text-align: center;
+    grid-area: left;
+    padding: 20px 0;
+    position: sticky;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(-273deg, rgb(8, 0, 22), rgba(255, 255, 255, 0.1));
+}
+
+#left > img:nth-child(1){
+    border-radius: 80%;
+    -webkit-box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+    -moz-box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+    box-shadow: 8px 8px 24px -8px rgba(66, 68, 90, 0.72);
+}
+
+#left > a:hover > img{
+    border-radius: 50px;
+    -webkit-box-shadow: 8px 8px 24px -8px rgba(203, 207, 250);
+    -moz-box-shadow: 8px 8px 24px -8px rgba(203, 207, 250);
+    box-shadow: 8px 8px 24px -8px rgba(203, 207, 250);
+}
+
+nav{
+    grid-area: nav;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+nav > ul{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+    list-style-type: none;
+    align-items: center;
+}
+
+nav > ul > li{
+    font-size: 22px!important;
+}
+
+nav > ul > li:hover{
+    color: black;
+    text-shadow: 2px 2px 3px rgb(255, 255, 255);
+}
+
+main{
+    grid-area: main;
+    padding: 20px 20px;
+    text-align: justify;
+}
+
+main>div:not(:nth-child(1)){
+    margin-top: 30px;
+}
+
+main > div{
+    clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+    padding: 40px 10%;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 5px 5px 8px;
+}
+
+main p{
+    margin: 0;
+}
+
+main h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+main img{
+    float: left;
+    shape-outside: circle(50%); 
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+main > #form{
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between!important;
+    justify-content: center;
+    padding: 0;
+    padding-left: 10%;
+    border-radius: 5px;
+}
+
+main > #form #inputs{
+    display:flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+main > #form h1{
+    margin: 0;
+}
+
+main > #form img{
+    width: 50%;
+    margin-right: 0;
+    border-radius: 0;
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+main > #form > form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 25px;
+    align-items: left;
+    margin: 15px 0;
+}
+
+main > #form > form > input{
+    padding: 10px;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+}
+
+input[type=submit]{
+    background-color: rgba(40, 1, 49, 0.8)!important;
+    width: fit-content;
+    color: aliceblue;
+    border-radius: 30px!important;
+    padding: 10px 20px!important;
+}
+
+#right{
+    text-align: center;
+    grid-area: right;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 2;
+    background: linear-gradient(273deg, rgb(8, 0, 22), rgba(61, 43, 94, 0.4));
+}
+
+footer{
+    z-index: 2;
+    grid-area: footer;
+    background-color: rgba(119, 117, 117, 0.9);
+    background-image: url(assets/bcg_footer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    text-align: center;
+}
+
+#grid-container{
+    display: grid;
+    grid-template-areas:
+    'header header header'
+    'left nav right'
+    'left main right'
+    'footer footer footer';
+    grid-template-columns: 20% 60% auto;
+    grid-template-rows: auto 50px auto 10vh;
+    gap: 10px;
+    padding: 10px;
+}
+
+@media (min-width: 481px) and (max-width: 1024px){
+    #grid-container{
+        grid-template-areas:
+        'header header'
+        'nav nav'
+        'left main'
+        'right footer';
+        grid-template-columns: 30% auto;
+        grid-template-rows: auto 50px auto auto;
+    }
+    
+}
+
+@media (max-width: 900px){
+    main > #form img{
+        display: none;
+    }
+
+    main > #form{
+        padding-left: 0;
+        justify-content: center!important;
+    }
+}
+
+@media (max-width: 700px){
+    main > #form #inputs{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px){
+    #grid-container{
+        grid-template-areas:
+        'header'
+        'nav'
+        'main'
+        'left'
+        'right'
+        'footer';
+        grid-template-columns: auto;
+        grid-template-rows: auto 50px auto;
+    }
+
+    #left{
+        height: auto;
+    }
+}

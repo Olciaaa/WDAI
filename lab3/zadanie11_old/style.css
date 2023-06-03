@@ -1,0 +1,55 @@
+#content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+td{
+    text-transform: capitalize;
+}
+
+#regions > #tableBody > tr:nth-child(2n + 0){
+    border-bottom: 1px solid black;
+}
+
+#regions > #tableBody > tr:nth-child(2n + 0) > td{
+    padding: 0;
+}
+
+th{
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+tbody > tr{
+    border:none;
+}
+
+.subTab tr, .subTab th{
+    border: none;
+}
+
+.subTab{
+    display: none;
+}
+
+b{
+    cursor: pointer;
+    font-size: 30px;
+}
+
+*{
+    vertical-align: middle;
+}

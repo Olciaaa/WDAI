@@ -1,0 +1,26 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    // background-image: url(bcg3.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: linear-gradient(180deg, #333, #222 80%, #333);
+    //background-blend-mode: multiply;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
+
+    p{
+        margin: 0;
+        margin-top: 5px;
+    }
+    h1{
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 800px){
+    }
+}

@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+}
+
+section{
+    background-color: rgba(179, 164, 141, 0.6);
+    height: 3000px;
+
+}
+#topPhoto{
+    height: 710px;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#topPhoto > img:nth-of-type(1){
+    height: 250px;
+    margin: 15px;
+    border-radius: 20px;
+}
+
+#window{
+    z-index: -1;
+    text-align: center;
+}
+
+#videoCall{
+    background-color: rgb(14, 12, 9);
+    height: 710px;
+    position: relative;
+}
+
+#dots, #dotsForMini{
+    position: absolute;
+    width: 20px!important;
+    height: auto!important;
+    border-radius: 20px;
+    top: 550px;
+    left: 10px;
+    z-index: 1;
+}
+
+#dotsForMini{
+    display: none;
+}
+
+#videoCall > img{
+    height: 100%;
+    z-index: 0;
+    text-align: center;
+    align-items: center;
+}
+
+#icones >img{
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.whiteCircle{
+    background-color: white;
+    border: 1px solid rgba(179, 164, 141, 1);
+}
+
+#redCircle{
+    background-color: rgb(136, 6, 6);
+    border: 1px solid rgba(179, 164, 141, 1);
+}
+
+#icones{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+}
+
+@media screen and (max-width: 573px) { 
+    #videoCall > img{
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    #videoCall{
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+    #topPhoto > img:nth-of-type(1){
+        position: absolute;
+        clip: rect(10px,130px,140px,30px);
+        margin-left: -10px;
+        transition-duration: 550ms;
+    }
+
+    #topPhoto > img:nth-of-type(2){
+        margin: 450px 0 50px 15px;
+        position: absolute;
+    
+    }
+
+    #dots{
+        display: none;
+    }
+
+    #dotsForMini{
+        display: block;
+        top: auto;
+        bottom: 50px;
+    }
+
+    #icones{
+        bottom: 40px;
+    }
+}

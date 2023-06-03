@@ -1,0 +1,39 @@
+<h1>Add Trip</h1>
+<form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+ <div>
+    <label>name </label>
+    <input type = "text" name="name" formControlName="name">
+ </div>
+ <div>
+    <label>place </label>
+    <input type = "text" name="place" formControlName="place">
+ </div>
+ <div>
+    <label>start date </label>
+    <input type = "date" name="startDate" formControlName="startDate">
+ </div>
+ <div>
+    <label>end date </label>
+    <input type = "date" name="endDate" formControlName="endDate">
+ </div>
+ <div>
+    <label>price </label>
+    <input type="number" min="0.00" step="0.01" name = "price" formControlName = "price">
+ </div>
+ <div>
+    <label>max participants </label>
+    <input type="number" min = "0" step = "1" name = "maxParticipants" formControlName = "maxParticipants" pattern="[0-9]+">
+ </div>
+ <div>
+    <label>picture </label>
+    <input type="text" name = "picture" formControlName = "picture" placeholder="https://example.com" pattern="(https|http)://.*.(jpg|png)">
+ </div>
+ <div>
+    <label>description </label>
+    <input type="text" name = "description" formControlName = "description">
+ </div>
+
+ <p *ngIf="!dateFine">!Data początku większa niż data końca!</p>
+
+ <button [disabled]="!modelForm.valid" type="submit">Send</button>
+</form>

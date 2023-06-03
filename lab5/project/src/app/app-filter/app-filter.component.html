@@ -1,0 +1,43 @@
+<ng-container *ngIf="ready">
+    <h1>Filters</h1>
+<div>
+    <div>
+        <input type="range" id="minPrice" name="minPrice" min="{{filters.price[0]}}" max="{{filters.price[1]}}" (change) = "filter()" [(ngModel)]="readyFilters.price[0]">
+        <label for="price">minimum pricee</label>
+    </div>
+    <div>
+        <input type="range" id="maxPrice" name="maxPrice" min="{{filters.price[0]}}" max="{{filters.price[1]}}" (change) = "filter()" [(ngModel)]="readyFilters.price[1]">
+        <label for="maxPrice">maxium price</label>
+    </div>
+    <p>current prices: ${{readyFilters.price[0]}} - ${{readyFilters.price[1]}}</p>
+</div>
+<div>
+    Select places:
+    <div>
+        <input type="checkbox" name="places" value = "all" (change) = "checkAll($event)" checked>
+        <label>check all</label>
+    </div> 
+    <div *ngFor = "let place of filters.placeRange; index as i">
+        <input class = "places" type="checkbox" name="places" value = "place" (change) = "placeAdd(place, $event)" checked>
+        <label>{{place}}</label>
+    </div>    
+</div>
+<div>
+    <label for="startDate">trip starts after... </label>
+    <input type="date" id="startDate" name="startDate" (change) = "filter()" [(ngModel)]="readyFilters.startDate[0]">
+</div>
+<div>
+    <label for="endDate">trip ends before... </label>
+    <input type="date" id="endDate" name="endDate" (change) = "filter()" [(ngModel)]="readyFilters.endDate[1]">
+</div>
+<div>
+    Select grade:
+    <div *ngFor = "let grade of filters.grade; index as i">
+        <input type="checkbox" name="grades" value = "grade" (change) = "gradeAdd(grade, $event)" checked>
+        <label *ngIf = "grade > 0">{{grade}}</label>
+        <label *ngIf = "grade == 0">no grades yet</label>
+    </div> 
+</div>
+</ng-container>
+
+
